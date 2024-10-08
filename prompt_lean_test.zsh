@@ -6,6 +6,7 @@
 COLOR1="242"
 COLOR2="110"
 COLOR3="150"
+COLOR4="140"
 
 function comphex() {
     local name="$1"
@@ -38,7 +39,7 @@ comphex "prompt" $PROMPT $expect
 ( cd /tmp
 prompt_lean_precmd
 prompt_lean_preexec
-expect='%F{'$COLOR3'}%f%F{'$COLOR2'}/tmp%F{'$COLOR1'}$vcs_info_msg_0_%f%f'
+expect='%F{'$COLOR3'}%f%F{'$COLOR4'}/tmp%F{'$COLOR1'}$vcs_info_msg_0_%f%f'
 comphex "rprompt" $RPROMPT $expect
 )
 
@@ -58,7 +59,7 @@ PROMPT_LEAN_RIGHT=right
 
 prompt_lean_precmd
 prompt_lean_preexec
-expect='%F{'$COLOR3'}%f%F{'$COLOR2'}/tmp%F{'$COLOR1'}$vcs_info_msg_0_%fright%f'
+expect='%F{'$COLOR3'}%f%F{'$COLOR4'}/tmp%F{'$COLOR1'}$vcs_info_msg_0_%fright%f'
 comphex "lean_right" $RPROMPT $expect
 )
 
@@ -79,7 +80,7 @@ sleep 1
 
 prompt_lean_precmd
 prompt_lean_preexec
-expect='%F{'$COLOR3'}1s %f%F{'$COLOR2'}/tmp%F{'$COLOR1'}$vcs_info_msg_0_%f%f'
+expect='%F{'$COLOR3'}1s %f%F{'$COLOR4'}/tmp%F{'$COLOR1'}$vcs_info_msg_0_%f%f'
 comphex "time" $RPROMPT $expect
 )
 
